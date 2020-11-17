@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 interface Props {
-  color: string;
+  color?: string;
+  index?: number;
 }
 
 export const RecommendationsContainer = styled.div`
@@ -11,6 +12,10 @@ export const RecommendationsContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1057px) {
+    margin-left: 20px;
+    width: auto;
+  }
   & > p {
     font-size: 26px;
     color: ${(props) => props.theme.terciaryColor};
@@ -49,7 +54,14 @@ export const ColorRound = styled.div`
 `;
 
 export const Item = styled.div`
+  @media (max-width: 1057px) {
+    display: ${(props: Props) =>
+      props.index ? (props.index > 2 ? "none" : "block") : null};
+  }
   margin-right: 13px;
+  & > img {
+    width: 100%;
+  }
   & > div {
     display: flex;
     align-items: center;

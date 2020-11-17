@@ -8,6 +8,7 @@ import {
   Size,
   ColorRound,
   TamanhoSelect,
+  PriceDiv,
 } from "./styles";
 import { AppState } from "../../redux/reducers/index";
 import { Cores } from "../../interfaces/Cores";
@@ -131,7 +132,36 @@ function ProductDescription() {
         </div>
         <div>{displayTamanho()}</div>
       </Size>
-      <button onClick={addSacola}>ADICIONAR À SACOLA</button>
+      <PriceDiv>
+        <Price mobile>
+          <p>
+            <span>
+              R${" "}
+              {produto.preco.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}{" "}
+            </span>{" "}
+            R${" "}
+            {produto.precoPromocional.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
+          <p>
+            Ou {produto.maxParcelas}x de R${" "}
+            {(produto.precoPromocional / produto.maxParcelas).toLocaleString(
+              "pt-BR",
+              {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              }
+            )}
+          </p>
+        </Price>
+        <button onClick={addSacola}>ADICIONAR À SACOLA</button>
+      </PriceDiv>
+      <p>Descrição</p>
       <p>
         Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui
         sola sempre na cor do cabedal.

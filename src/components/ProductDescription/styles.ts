@@ -4,14 +4,48 @@ interface Props {
   color?: string;
   onClick: (e: Event) => void;
   active: boolean;
+  mobile?: boolean;
+}
+
+interface PriceProps {
+  mobile?: boolean;
 }
 
 export const DescriptionContainer = styled.div`
-  width: 444px;
+  max-width: 444px;
+  width: 100%;
   height: 533px;
   border: 2px solid #d2e1df;
   padding: 20px;
 
+  @media (max-width: 1057px) {
+    border: none;
+    height: 100%;
+    max-width: none;
+  }
+
+  & > p:first-of-type {
+    @media (min-width: 1057px) {
+      display: none;
+    }
+    font-size: 20px;
+    line-height: 200%;
+    color: #e0967e;
+  }
+
+  & > p {
+    font-size: 15px;
+    line-height: 200%;
+    @media (max-width: 1057px) {
+      font-size: 25px;
+    }
+  }
+`;
+
+export const PriceDiv = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   & > button {
     height: 60px;
     width: 100%;
@@ -23,14 +57,12 @@ export const DescriptionContainer = styled.div`
     margin: 53px 0px 0px 0px;
     outline: none;
   }
-
-  & > p {
-    font-size: 15px;
-    line-height: 200%;
-  }
 `;
 
 export const Title = styled.div`
+  @media (max-width: 1057px) {
+    display: none;
+  }
   & > p:first-child {
     font-size: 26px;
     font-weight: bold;
@@ -43,14 +75,23 @@ export const Title = styled.div`
 
 export const Price = styled.div`
   margin: 24px 0px 0px 0px;
+  @media (max-width: 1057px) {
+    display: ${(props: PriceProps) => (props.mobile ? "block" : "none")};
+    width: 100%;
+  }
+  @media (min-width: 1057px) {
+    display: ${(props: PriceProps) => (props.mobile ? "none" : "block")};
+  }
 
   & p:first-child {
     font-size: 20px;
     color: #686868;
-    font-weight: bold;
     margin: 0;
+    display: flex;
+    flex-direction: column;
   }
   & span {
+    text-decoration: line-through;
     color: #e35443;
     font-size: 14px;
     font-weight: normal;
@@ -96,7 +137,7 @@ export const ColorRound = styled.div`
 
 export const Size = styled.div`
   margin: 20px 0px 0px 0px;
-
+  width: fit-content;
   & > div:first-child {
     display: flex;
     align-items: center;

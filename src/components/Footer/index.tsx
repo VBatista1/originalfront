@@ -3,6 +3,7 @@ import OriginalLogo from "../../assets/LogoWhite.png";
 import FacebookLogo from "../../assets/FacebookLogo.png";
 import InstagramLogo from "../../assets/InstagramLogo.png";
 import PinterestLogo from "../../assets/PinterestLogo.png";
+import PlusIcon from "../../assets/PlusIcon2.png";
 import VtexCertified from "../../assets/VtexCertified.png";
 import SeloEbit from "../../assets/SeloEbit.png";
 import {
@@ -11,11 +12,27 @@ import {
   RedeSociais,
   Rodape,
   Newsletter,
+  InfoMobile,
+  Info,
 } from "./styles";
 
 function Footer() {
   return (
     <FooterContainer>
+      <InfoMobile>
+        <li>
+          INSTITUCIONAL
+          <img src={PlusIcon} />
+        </li>
+        <li>
+          INFORMAÇÕES
+          <img src={PlusIcon} />
+        </li>
+        <li>
+          CONHEÇA
+          <img src={PlusIcon} />
+        </li>
+      </InfoMobile>
       <RedeSociais>
         <div>
           <img src={FacebookLogo} />
@@ -30,28 +47,30 @@ function Footer() {
             <img src={SeloEbit} />
           </div>
           <div>
-            <ul>
-              <li>INSTITUCIONAL</li>
-              <li>A Marca</li>
-              <li>Lojas</li>
-              <li>Contato</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>INFORMAÇÕES</li>
-              <li>Formas de Pagamento</li>
-              <li>Trocas e Devoluções</li>
-              <li>Cuidados Com O Produto</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>CONHEÇA</li>
-              <li>Franquias e Multimarcas</li>
-              <li>Trabalhe com a Gente</li>
-              <li>Procon-RJ</li>
-            </ul>
+            <div>
+              <Info>
+                <li>INSTITUCIONAL</li>
+                <li>A Marca</li>
+                <li>Lojas</li>
+                <li>Contato</li>
+              </Info>
+            </div>
+            <div>
+              <Info>
+                <li>INFORMAÇÕES</li>
+                <li>Formas de Pagamento</li>
+                <li>Trocas e Devoluções</li>
+                <li>Cuidados Com O Produto</li>
+              </Info>
+            </div>
+            <div>
+              <Info>
+                <li>CONHEÇA</li>
+                <li>Franquias e Multimarcas</li>
+                <li>Trabalhe com a Gente</li>
+                <li>Procon-RJ</li>
+              </Info>
+            </div>
           </div>
           <Newsletter>
             <p>ASSINE NOSSA NEWS</p>
@@ -69,10 +88,10 @@ function Footer() {
       <Copyright>
         <div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            molestie massa in nunc condimentum, vel placerat lacus pulvinar.
-            Suspendisse vel nisl eu tortor feugiat tempus vel in tortor. Nunc
-            semper leo nec tellus gravida faucibus.
+            Via Mia | V. Milano Centro Comercio de Bolsas Eireli - EPP. Av.das
+            Américas, 500 - bloco 20, loja 126 - Barra da Tijuca - Rio de
+            Janeiro - RJ - CEP: 22640-100 CNPJ: 05.292.288/0002-10 - I.E:
+            86.732.548 - E-mail: ecommerce@viamia.com.br
           </p>
           <img src={OriginalLogo} />
         </div>

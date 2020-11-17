@@ -4,6 +4,37 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  & > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @media (min-width: 1057px) {
+      justify-content: center;
+    }
+    & > button {
+      margin: 0px 10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      @media (min-width: 1057px) {
+        display: none;
+      }
+    }
+
+    & > div {
+      display: flex;
+      & > button {
+        margin: 0px 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        @media (min-width: 1057px) {
+          display: none;
+        }
+      }
+    }
+  }
 `;
 
 export const Logo = styled.img`
@@ -18,6 +49,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   height: 50px;
+
+  @media (max-width: 1057px) {
+    display: none;
+  }
 `;
 
 export const List = styled.ul`
@@ -34,7 +69,8 @@ export const ListItem = styled.li`
 export const NavItem = styled.div`
   display: flex;
   flex-direction: row;
-  width: ${(props) => props.theme.widthContainer};
+  width: 100%;
+  max-width: ${(props) => props.theme.widthContainer};
   justify-content: space-between;
 `;
 

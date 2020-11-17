@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const BreadcrumbContainer = styled.div`
+  @media (max-width: 1057px) {
+    display: none;
+  }
   display: flex;
   justify-content: center;
   & div {

@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Copyright = styled.div`
-  height: 60px;
+  height: 100%;
   background-color: ${(props) => props.theme.terciaryColor};
   display: flex;
   justify-content: center;
@@ -14,16 +14,23 @@ export const Copyright = styled.div`
     display: flex;
     width: 1150px;
     justify-content: space-between;
+
+    @media (max-width: 1057px) {
+      flex-direction: column;
+      padding: 0px 20px;
+    }
   }
 
   & p {
     font-size: 12px;
-    width: 728px;
+    width: 100%;
+    max-width: 728px;
     color: white;
   }
 
   & img {
     align-self: center;
+    margin: 10px 0px;
   }
 `;
 
@@ -32,7 +39,13 @@ export const RedeSociais = styled.div`
   justify-content: center;
 
   & div {
-    width: ${(props) => props.theme.widthContainer};
+    width: 100%;
+    max-width: ${(props) => props.theme.widthContainer};
+
+    @media (max-width: 1057px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   & img {
@@ -44,38 +57,40 @@ export const Rodape = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 59px;
+  @media (max-width: 1057px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   & > div {
     display: flex;
-    width: ${(props) => props.theme.widthContainer};
+    width: 100%;
+    max-width: 1280px;
     height: 100px;
     justify-content: space-between;
 
-    & div:first-child {
+    @media (max-width: 1057px) {
+      height: 100%;
+      flex-direction: column;
+    }
+
+    & > div:nth-child(1) {
       display: flex;
       align-items: center;
       padding-right: 32px;
+      justify-content: center;
     }
 
-    & img:first-child {
+    & > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      @media (max-width: 1057px) {
+        display: none;
+      }
+    }
+
+    & img {
       padding-right: 32px;
-    }
-
-    & ul {
-      list-style-type: none;
-      margin: 0;
-    }
-
-    & li:first-child {
-      font-size: 12px;
-      color: ${(props) => props.theme.secundaryColor};
-      padding: 0px 0px 6px 0px;
-    }
-
-    & li {
-      font-size: 14px;
-      color: #202020;
-      padding: 6px 0px;
     }
   }
 `;
@@ -93,18 +108,32 @@ export const Newsletter = styled.div`
   justify-content: center;
   flex-direction: column;
 
+  @media (max-width: 1057px) {
+    border: none;
+    top: 0;
+    width: 100%;
+  }
+
   & p {
     font-weight: bold;
     margin-bottom: 40px;
+
+    @media (max-width: 1057px) {
+      color: #aeb6c1;
+      font-weight: 100;
+    }
   }
 
   & label {
     position: relative;
     bottom: 47px;
     font-size: 12px;
-    left: -97px;
+    left: -99px;
     transition: all 0.3s ease-out;
     color: rgba(32, 32, 32, 0.5);
+    @media (max-width: 1057px) {
+      left: -189px;
+    }
   }
 
   & input {
@@ -113,6 +142,10 @@ export const Newsletter = styled.div`
     border-bottom: 1px solid ${(props) => props.theme.secundaryColor};
     margin-bottom: 27px;
     width: 230px;
+
+    @media (max-width: 1057px) {
+      width: 86%;
+    }
   }
 
   & input::placeholder {
@@ -126,6 +159,9 @@ export const Newsletter = styled.div`
     font-size: 12px;
     left: -99px;
     color: rgba(32, 32, 32, 0.5);
+    @media (max-width: 1057px) {
+      left: -189px;
+    }
   }
 
   & button {
@@ -136,5 +172,43 @@ export const Newsletter = styled.div`
     border-radius: 3px;
     color: white;
     outline: none;
+  }
+`;
+
+export const Info = styled.ul`
+  list-style-type: none;
+  margin: 0;
+
+  & > li:first-child {
+    font-size: 12px;
+    color: ${(props) => props.theme.secundaryColor};
+    padding: 0px 0px 6px 0px;
+  }
+
+  & > li {
+    font-size: 14px;
+    color: #202020;
+    padding: 6px 0px;
+  }
+`;
+
+export const InfoMobile = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 1057px) {
+    display: none;
+  }
+
+  & li {
+    font-size: 14px;
+    color: #aeb6c1;
+    border-bottom: 1px solid #aeb6c1;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
   }
 `;

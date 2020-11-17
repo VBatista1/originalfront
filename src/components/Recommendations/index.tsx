@@ -12,7 +12,7 @@ function Recommendations() {
     <RecommendationsContainer>
       <p>QUEM VIU, VIU TAMBÉM</p>
       <div>
-        <Item>
+        <Item index={1}>
           <img src={Prod1} />
           <div>
             <p>R$ 204,90</p>
@@ -24,7 +24,7 @@ function Recommendations() {
             </div>
           </div>
         </Item>
-        <Item>
+        <Item index={2}>
           <img src={Prod2} />
           <div>
             <p>R$ 204,90</p>
@@ -36,7 +36,7 @@ function Recommendations() {
             </div>
           </div>
         </Item>
-        <Item>
+        <Item index={3}>
           <img src={Prod3} />
           <div>
             <p>R$ 204,90</p>
@@ -48,7 +48,7 @@ function Recommendations() {
             </div>
           </div>
         </Item>
-        <Item>
+        <Item index={4}>
           <img src={Prod4} />
           <div>
             <p>R$ 204,90</p>
