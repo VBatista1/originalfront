@@ -13,16 +13,16 @@ function Gallery() {
     <GalleryContainer>
       <div>
         <p>Vídeo</p>
-        <img src={Video} />
+        <img alt="Imagem do vídeo" src={Video} />
         <button>
-          <img src={UpArrow} />
+          <img alt="Icone de movimentação para cima" src={UpArrow} />
         </button>
-        <img src={ProductImage} />
-        <img src={ProductImage} />
-        <img src={ProductImage} />
-        <img src={ProductImage} />
+        <img alt="Imagem do produto" src={ProductImage} />
+        <img alt="Imagem do produto" src={ProductImage} />
+        <img alt="Imagem do produto" src={ProductImage} />
+        <img alt="Imagem do produto" src={ProductImage} />
         <button>
-          <img src={DownArrow} />
+          <img alt="Icone de movimentação para baixo" src={DownArrow} />
         </button>
       </div>
       <div>
@@ -32,7 +32,7 @@ function Gallery() {
             {produto.codigo} | {produto.codigo2}
           </p>
         </Title>
-        <img src={ProductImage} />
+        <img alt="Imagem do Produto" src={ProductImage} />
       </div>
     </GalleryContainer>
   );

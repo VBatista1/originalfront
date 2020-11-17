@@ -14,10 +14,10 @@ function Modal(props: props) {
       <ModalContent>
         <div>
           <button onClick={props.handleStatusModal}>
-            <img src={CloseIcon} />
+            <img alt="Imagem de fechamento" src={CloseIcon} />
           </button>
         </div>
-        <img src={ProductImage} />
+        <img alt="Imagem do produto" src={ProductImage} />
         <p>PRODUTO ADICIONADO COM SUCESSO!</p>
         <button>FINALIZAR COMPRA</button>
         <a href="#" onClick={props.handleStatusModal}>

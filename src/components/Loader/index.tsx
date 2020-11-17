@@ -9,7 +9,7 @@ interface props {
 export default function Loader(props: props) {
   return (
     <LoaderContainer status={props.status}>
-      <img src={LoadingGif} />
+      <img alt="Ícone de carregamento" src={LoadingGif} />
     </LoaderContainer>
   );
 }

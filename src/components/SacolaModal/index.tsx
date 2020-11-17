@@ -49,7 +49,7 @@ function SacolaModal(props: props) {
 
   function handleTotal() {
     let total: number = 0;
-    return produtos.map((produto, index) => {
+    produtos.map((produto, index) => {
       total += produto.preco * produto.quantidade;
       if (index === produtos.length - 1) setTotalSacola(total);
     });
@@ -59,7 +59,7 @@ function SacolaModal(props: props) {
     const itens = produtos.map((produto: Sacola, index: number) => {
       return (
         <ProductItem key={index}>
-          <img src={ProductImage} />
+          <img alt="Imagem do produto" src={ProductImage} />
           <div>
             <p>{produto.nome}</p>
             <p>
@@ -72,16 +72,16 @@ function SacolaModal(props: props) {
           </div>
           <div>
             <button onClick={() => removeQuantity(index)}>
-              <img src={MinusIcon} />
+              <img alt="Ícone de subtração" src={MinusIcon} />
             </button>
             <p>{produto.quantidade}</p>
             <button onClick={() => addQuantity(index)}>
-              <img src={PlusIcon} />
+              <img alt="Ícone de adição" src={PlusIcon} />
             </button>
           </div>
           <div>
             <button onClick={() => deleteItem(index)}>
-              <img src={CloseIcon2} />
+              <img alt="Ícone de remoção" src={CloseIcon2} />
             </button>
           </div>
         </ProductItem>
@@ -103,7 +103,7 @@ function SacolaModal(props: props) {
       <SacolaContent>
         <div>
           <button onClick={props.handleStatusModal}>
-            <img src={CloseIcon} />
+            <img alt="Ícone de fechamento" src={CloseIcon} />
           </button>
         </div>
         <SacolaHeader>

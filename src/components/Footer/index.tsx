@@ -22,29 +22,29 @@ function Footer() {
       <InfoMobile>
         <li>
           INSTITUCIONAL
-          <img src={PlusIcon} />
+          <img alt="Ícone de adição" src={PlusIcon} />
         </li>
         <li>
           INFORMAÇÕES
-          <img src={PlusIcon} />
+          <img alt="Ícone de adição" src={PlusIcon} />
         </li>
         <li>
           CONHEÇA
-          <img src={PlusIcon} />
+          <img alt="Ícone de adição" src={PlusIcon} />
         </li>
       </InfoMobile>
       <RedeSociais>
         <div>
-          <img src={FacebookLogo} />
-          <img src={InstagramLogo} />
-          <img src={PinterestLogo} />
+          <img alt="Logo do Facebook" src={FacebookLogo} />
+          <img alt="Logo do Instagram" src={InstagramLogo} />
+          <img alt="Logo do Pinterest" src={PinterestLogo} />
         </div>
       </RedeSociais>
       <Rodape>
         <div>
           <div>
-            <img src={VtexCertified} />
-            <img src={SeloEbit} />
+            <img alt="Selo de certificação Vtex" src={VtexCertified} />
+            <img alt="Selo Ebit" src={SeloEbit} />
           </div>
           <div>
             <div>
@@ -93,7 +93,7 @@ function Footer() {
             Janeiro - RJ - CEP: 22640-100 CNPJ: 05.292.288/0002-10 - I.E:
             86.732.548 - E-mail: ecommerce@viamia.com.br
           </p>
-          <img src={OriginalLogo} />
+          <img alt="Logo da Original.io" src={OriginalLogo} />
         </div>
       </Copyright>
     </FooterContainer>

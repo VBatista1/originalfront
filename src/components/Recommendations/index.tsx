@@ -13,7 +13,7 @@ function Recommendations() {
       <p>QUEM VIU, VIU TAMBÉM</p>
       <div>
         <Item index={1}>
-          <img src={Prod1} />
+          <img alt="Imagem do produto" src={Prod1} />
           <div>
             <p>R$ 204,90</p>
             <div>
@@ -25,7 +25,7 @@ function Recommendations() {
           </div>
         </Item>
         <Item index={2}>
-          <img src={Prod2} />
+          <img alt="Imagem do produto" src={Prod2} />
           <div>
             <p>R$ 204,90</p>
             <div>
@@ -37,7 +37,7 @@ function Recommendations() {
           </div>
         </Item>
         <Item index={3}>
-          <img src={Prod3} />
+          <img alt="Imagem do produto" src={Prod3} />
           <div>
             <p>R$ 204,90</p>
             <div>
@@ -49,7 +49,7 @@ function Recommendations() {
           </div>
         </Item>
         <Item index={4}>
-          <img src={Prod4} />
+          <img alt="Imagem do produto" src={Prod4} />
           <div>
             <p>R$ 204,90</p>
             <div>
@@ -63,11 +63,11 @@ function Recommendations() {
       </div>
       <div>
         <button>
-          <img src={LeftArrow} />
+          <img alt="Seta para esquerda" src={LeftArrow} />
         </button>
         <p>1 de 3</p>
         <button>
-          <img src={RightArrow} />
+          <img alt="Seta para direita" src={RightArrow} />
         </button>
       </div>
     </RecommendationsContainer>

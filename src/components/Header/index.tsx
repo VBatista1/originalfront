@@ -21,12 +21,12 @@ function Header() {
     <Container>
       <div>
         <button>
-          <img src={MenuIcon} />
+          <img alt="Ícone do menu" src={MenuIcon} />
         </button>
-        <Logo src={OriginalLogo} />
+        <Logo alt="Logo da Original.io" src={OriginalLogo} />
         <div>
           <button>
-            <img src={SearchIcon} />
+            <img alt="Ícone da barra de pesquisa" src={SearchIcon} />
           </button>
           <Cart mobile />
         </div>
